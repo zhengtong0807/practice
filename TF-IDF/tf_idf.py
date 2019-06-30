@@ -47,5 +47,5 @@ feature_words = np.array(feature_words)
 tvec = TfidfVectorizer()
 tvec = tvec.fit_transform(corpus)
 first_sen = tvec.toarray()[0]
-max_indices = np.argsort(first_sen)[-topK:]
-print('sklearn extract:', feature_words[max_indices])  # ['人工智能' '领域' '自然语言']
+max_indices = np.argsort(-first_sen)[:topK]
+print('sklearn extract:', feature_words[max_indices])  # ['自然语言' '领域' '语言学']
