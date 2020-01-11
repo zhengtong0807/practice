@@ -8,5 +8,3 @@
 **text-classification**：中文短文本分类（TextCNN，Keras）
 
 **Word2Vec**：词向量实践（gensim）
-
-**ecg_cnn**：基于CNN的静态心电图分类（Keras）
