@@ -1,26 +1,21 @@
-import os
-
 import jieba
 from jieba.analyse import extract_tags
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
-from pprint import pprint
 
 # TODO: jieba加载行业词典
 
-os.chdir('TF-IDF')  # 修改当前工作目录
-
 TOPK = 3  # 返回 TF-IDF 值最大的关键词个数
-WITH_WEIGHT = True  # 是否带权重返回
+WITH_WEIGHT = False  # 是否带权重返回
 
 
 def filter_stop_words(sen, stop_words):
-    '''
+    """
     对分词后的文本去停用词
     Parameter:
         - sen: 1-d list，分词后的文本
         - stop_words: 1-d list，停用词典
-    '''
+    """
     sen_filter = []
     for word in sen:
         if word not in stop_words:
