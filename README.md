@@ -1,5 +1,5 @@
 # practice
-练习小项目
+练习项目
 
 **NER**：命名实体识别（BiLSTM+CRF，Keras），目前只是把流程跑通，后续还需调优
 
